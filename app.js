@@ -1,7 +1,7 @@
 // import functions and grab DOM elements
 
 import { countsAsAYes } from "./ultis.js";
-
+import { countsAsANo } from "./ultis.js"
 
 const quizButton = document.getElementById('quiz-button');
 const answerArea = document.getElementById('answer-area');
@@ -23,18 +23,19 @@ let correctAnswers = 0;
 
 if (countsAsAYes(firstAnswer)) {
     correctAnswers++;
-} else {
+} 
 
-}
+
 const secondAnswer = prompt('Is a green zebra a type of cat?');
 
-if (!countsAsAYes(secondAnswer)) {
+
+
+if (countsAsANo(secondAnswer)) {
     correctAnswers++;
-} else {
+} 
 
-}
-
-const resultsString = 'you got ' + correctAnswers + ' correct!';
+const resultsString = `Hey ${firstName} ${lastName}
+You got ${correctAnswers} answer correct! `;
 
 answerArea.textContent = resultsString;
 
